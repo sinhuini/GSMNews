@@ -58,7 +58,7 @@ fun HomeScreen(
 
     var selectedTab by remember { mutableIntStateOf(0) } // 0 = News, 1 = Reviews, 2 = Bookmarks
     var selectedArticle by remember { mutableStateOf<Article?>(null) }
-    var readerMode by remember { mutableStateOf(false) } // False = WebView, True = Native distilled reader
+    var readerMode by remember { mutableStateOf(true) } // True = Native distilled reader (Default, offline safe), False = WebView
 
     val currentArticles = when (selectedTab) {
         0 -> newsArticles
